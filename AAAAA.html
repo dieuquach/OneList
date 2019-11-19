@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>aaa</title>
+</head>
+    <body>
+        <input type="button" value="back" onclick="onBack()"/>
+        <input type="button"  value="next" onclick="onNext()"/>
+        <div id="container"></div>
+        
+        <!-- <script>
+            var array = [];
+            for (let index = 0; index < 1000; index++) {
+                array.push(index);
+                }
+                console.log(array);
+
+                array.forEach(function(value) {
+                    var p = document.createElement("p");
+                    p.innerText = array[value];
+                    container.appendChild(p);
+                });
+            
+        </script> -->
+       
+        <script>
+             var a = 1;
+            function display(){
+                // Dong nay xoa cai cu de mo trang moi
+                container.innerHTML = "";
+                for (var i = a*10; i< (a+1)*10; i++){
+                    var p = document.createElement("p");
+                    p.innerText = "A "+i;
+                    container.appendChild(p);
+                }
+            }
+
+            function onNext(){
+                a++;
+                display();
+            }
+            function onBack(){
+                a--;
+                display();
+            }
+
+        </script>
+    </body>
+</html>
